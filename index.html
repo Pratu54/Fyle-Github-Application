@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Github Profiles</title>
+    <link rel="icon" href="GitHub_logo.png" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <form id="form" onsubmit="return formSubmit()">
+        <div class="search-container">
+            <select id="reposPerPage" onchange="changeReposPerPage()">
+                <option value="10" selected>10</option>
+                <option value="25">25</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+            </select>
+            <input type="text" id="search" placeholder="Search a Github User Here" />
+            
+        </div>
+    </form>
+    <main id="main">
+        <div id="loader" class="loader"></div>
+        <div id="user-card" class="card"></div>
+        <div id="repos" class="repos-container"></div>
+        <div id="pagination" class="pagination-container"></div>
+    </main>
+    <script src="app.js" defer></script>
+</body>
+</html>
